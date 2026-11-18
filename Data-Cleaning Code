@@ -1,0 +1,20 @@
+# Installing packages 
+install.packages("tidyverse")
+install.packages('lubridate')
+install.packages('forecast')
+install.packages('tseries')
+library(tidyverse)
+library(lubridate)
+library(forecast)
+library(tseries)
+
+data <- read.csv("C:/Users/carol/OneDrive - Wellesley College/stock_exchange.csv", header = TRUE)
+
+#changing date to standardized format
+
+data$Date <- as.Date(data$Date)
+
+#creating date buckets; need to control for economic shocks that would affect index forcasting
+
+#creating return variable within the table 
+
